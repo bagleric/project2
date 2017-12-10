@@ -1,0 +1,88 @@
+.jumbotron {
+    background: #532F8C;
+    color: white;
+    padding-bottom: 80px;
+}
+
+.jumbotron .btn-primary {
+    background: #845ac7;
+    border-color: #845ac7;
+}
+
+.jumbotron .btn-primary:hover {
+    background: #7646c1;
+}
+
+.jumbotron p {
+    color: #d9ccee;
+    max-width: 75%;
+    margin: 1em auto 2em;
+}
+
+.navbar + .jumbotron {
+    margin-top: -20px;
+}
+
+.jumbotron .lang-logo {
+    display: block;
+    background: #B01302;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 2px solid white;
+}
+
+.jumbotron .lang-logo img {
+    max-width: 100%;
+}
+
+.general-box {
+    background-color: black;
+    color: aliceblue;
+    border: solid white 3px;
+    padding: 20px;
+    margin-bottom: 160px;
+}
+
+.timer {
+    position: fixed;
+    bottom: 0px;
+    padding: 20px;
+    width: 100vw;
+    height: auto;
+    align-items: center;
+
+}
+
+.clock-group {
+    width:auto;
+    height:auto;
+}
+
+.time-box{
+    font-size: 25px;
+    padding: 10px;
+    margin: 2px;
+    background-color: #FF5252;
+    text-align: center;
+    width: 150px;
+}
+.input{
+    width:130px;
+}
+.label{
+    width:100px;
+}
+.auto-mg{
+    margin: auto;
+}
+.dark-primary-color    { background: #455A64; }
+.default-primary-color { background: #607D8B; }
+.light-primary-color   { background: #CFD8DC; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #FF5252; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }
