@@ -1,4 +1,4 @@
-var breakTime = 2;
+var breakTime = 15;
 var timer = {
     intervals: 0
     , currentExerciseId: 0
@@ -160,18 +160,18 @@ function resetIntervalTime(){
 function updateExerciseQueue(){
     var selectedExercises = document.getElementById("selectedExercises").childNodes;
     console.log(selectedExercises);
-    var index = timer.currentExerciseId % selectedExercises.length;
-    var eSize = selectedExercises.length;
-    //console.log(eSize);
+    var index = timer.currentExerciseId % (selectedExercises.length-1);
+    var eSize = selectedExercises.length -1;
+    console.log(eSize);
     $("#currentExercise").empty();
-    if( eSize == 0){
-        $("#currentExercise").append("<h4>No Exercise Selected</h4>");
+    if( eSize < 1){
+        $("#currentExercise").append("<h3>No Exercise Selected</h3>");
         return;
     }
     
     if(timer.break){
-        if(timer.circuitSecondsRemaining <=0 || timer.circuitSecondsRemaining <= breakTime){
-            $("#currentExercise").append("<h6>Finished</h6>");
+        if(timer.circuitSecondsRemaining <=0 || timer.circuitSecondsRemaining <= timer.intervalTime){
+            $("#currentExercise").append("<h3>Finished</h3>");
         }
         else{
             //get the next exercise
@@ -187,14 +187,4 @@ function updateExerciseQueue(){
     }     
 }
 
-function question(){
-    timer.currentExerciseId % length;
-            var exercises = document.getElementById("selectedExercises").childNodes;
-            var length = exercises.length;
-            console.log("Exercise id " +time.currentExerciseId);
-            var title = exercises.item(timer.currentExerciseId).innerHTML;
-                        timer.currentExerciseId++;
-
-            $("#currentExercise").empty().append("<p class=\"current-exercise\">" + title + "</p>");
-}
             
